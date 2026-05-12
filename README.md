@@ -21,20 +21,24 @@ The benchmarks were conducted on a Yandex Cloud vm with the following specificat
 
 ## Benchmark Summary
 
-The table below summarizes Wikidata query measurements. All values are in seconds. The results are suplied for simple and complex(C) queries separetely.
+The table below summarizes Wikidata query measurements. All values are in seconds. The results are suplied for simple and complex (C) queries separetely. Speedup is computed as the relation between each competitor's measurement and the corresponding LARPQ measurement.
 
 | Measurement | MillenniumDB | LARPQ | Pathrex |
 | --- | ---: | ---: | ---: |
-| Simple total | 7.555623 | 1.526688 | 1.988198 |
-| Simple mean | 0.075556 | 0.015578 | 0.020288 |
-| Simple median | 0.000067 | 0.000227 | 0.000239 |
-| Complex total | 1538.031720 | 901.564501 | 1115.516581 |
-| Complex mean | 2.885613 | 1.691491 | 2.092902 |
-| Complex median | 0.041980 | 1.555902 | 1.962655 |
+| Total | 7.555623 | 1.526688 | 1.988198 |
+| Mean | 0.075556 | 0.015578 | 0.020288 |
+| Mean speedup | 4.85 | 1.00 | 1.30 |
+| Median | 0.000067 | 0.000227 | 0.000239 |
+| Median speedup | 0.30 | 1.00 | 1.05 |
+| Total (C) | 1538.031720 | 901.564501 | 1115.516581 |
+| Mean (C) | 2.885613 | 1.691491 | 2.092902 |
+| Mean speedup (C) | 1.71 | 1.00 | 1.24 |
+| Median (C) | 0.041980 | 1.555902 | 1.962655 |
+| Median speedup (C) | 0.03 | 1.00 | 1.26 |
 
 ## Results
 
-Pathrex demonstrates competitive performance on the Wikidata benchmark. It keeps the complete library/CLI execution path within about **24%** overhead over raw LARPQ. As a result, Pathrex remains about **3.8x faster** than MillenniumDB on simple queries and about **1.4x faster** on complex queries while including graph/query preparation and Rust-side orchestration.
+On simple queries, Pathrex is **3.72x faster** than MillenniumDB with **30%** overhead over raw LARPQ. On complex queries, Pathrex is **1.38x faster** than MillenniumDB with **24%** overhead over raw LARPQ. Overall, Pathrex keeps most of LARPQ's performance while staying faster than MillenniumDB on both query groups.
 
 ## Reproducibility
 MillenniumDB was benchmarked according to the [la-rpq](https://github.com/SparseLinearAlgebra/la-rpq) guide. The rest is provided by Pathrex mesurements.
