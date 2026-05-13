@@ -21,20 +21,20 @@ The benchmarks were conducted on a Yandex Cloud vm with the following specificat
 
 ## Benchmark Summary
 
-The table below summarizes Wikidata query measurements. All values are in seconds. The results are suplied for simple and complex (C) queries separetely. Speedup is computed as the relation between each competitor's measurement and the corresponding LARPQ measurement.
+The table below summarizes Wikidata query measurements. All values are in seconds. The results are suplied for simple and complex (C) queries separetely. Slowdown is computed as the relation between each competitor's measurement and the corresponding LARPQ measurement.
 
 | Measurement | MillenniumDB | LARPQ | Pathrex |
 | --- | ---: | ---: | ---: |
 | Total | 7.555623 | 1.526688 | 1.988198 |
 | Mean | 0.075556 | 0.015578 | 0.020288 |
-| Mean speedup | 4.85 | 1.00 | 1.30 |
+| Mean slowdown | 4.85 | 1.00 | 1.30 |
 | Median | 0.000067 | 0.000227 | 0.000239 |
-| Median speedup | 0.30 | 1.00 | 1.05 |
+| Median slowdown | 0.30 | 1.00 | 1.05 |
 | Total (C) | 1538.031720 | 901.564501 | 1115.516581 |
 | Mean (C) | 2.885613 | 1.691491 | 2.092902 |
-| Mean speedup (C) | 1.71 | 1.00 | 1.24 |
+| Mean slowdown (C) | 1.71 | 1.00 | 1.24 |
 | Median (C) | 0.041980 | 1.555902 | 1.962655 |
-| Median speedup (C) | 0.03 | 1.00 | 1.26 |
+| Median slowdown (C) | 0.03 | 1.00 | 1.26 |
 
 ## Results
 
